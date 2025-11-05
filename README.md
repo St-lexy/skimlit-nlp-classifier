@@ -113,8 +113,6 @@ skimlit-reimagined/
 ├── app.py                     # Streamlit app
 ├── model/                     # Saved model weights
 ├── data/                      # PubMed RCT dataset
-├── utils/                     # Preprocessing scripts
-├── requirements.txt
 └── README.md
 ```
 
