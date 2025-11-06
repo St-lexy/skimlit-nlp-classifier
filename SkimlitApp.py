@@ -5,11 +5,14 @@ import pandas as pd
 import re
 
 # Set page config
-st.set_page_config(page_title="Text Analysis App", page_icon="📝")
+st.set_page_config(page_title="SkimLit", page_icon="🧠📝")
 
 # Title
-st.title("📝 Text Analysis with TensorFlow Model")
-st.write("Enter a paragraph below and get predictions from your trained model!")
+st.title("🧠 SkimLit — AI-Powered Text Classifier")
+st.write(
+    "Analyze scientific abstracts in seconds. "
+    "**Background**, **Objective**, **Methods**, **Results**, and **Conclusions**."
+)
 
 # Load your saved model
 def load_tensorflow_model():
@@ -54,4 +57,5 @@ if st.button("Classify"):
         st.write("---")
         for sentence, label in zip(result["Sentence"], result["Label"]):
             st.markdown(f"**{label}** → {sentence}")
+
 
