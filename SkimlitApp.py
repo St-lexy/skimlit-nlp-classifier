@@ -13,7 +13,7 @@ st.write("Enter a paragraph below and get predictions from your trained model!")
 
 # Load your saved model
 def load_tensorflow_model():
-    model = tf.keras.models.load_model("Model/Skimlit.keras")
+    model = tf.keras.models.load_model("Skimlit.keras")
     return model
 model  = load_tensorflow_model()
 
@@ -54,3 +54,4 @@ if st.button("Classify"):
         st.write("---")
         for sentence, label in zip(result["Sentence"], result["Label"]):
             st.markdown(f"**{label}** → {sentence}")
+
