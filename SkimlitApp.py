@@ -21,7 +21,7 @@ def load_tensorflow_model():
 model  = load_tensorflow_model()
 
 # Text input
-abstract = st.text_area("Enter a medical abstract:", height=500)
+abstract = st.text_area("Enter your abstract:", height=500)
 
 if st.button("Classify"):
     if abstract.strip() == "":
@@ -57,5 +57,6 @@ if st.button("Classify"):
         st.write("---")
         for sentence, label in zip(result["Sentence"], result["Label"]):
             st.markdown(f"**{label}** → {sentence}")
+
 
 
